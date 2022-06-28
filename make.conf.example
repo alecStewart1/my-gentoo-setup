@@ -1,0 +1,24 @@
+ACCEPT_KEYWORDS="amd64"
+ABI_X86="64 32"
+
+COMMON_FLAGS="-O2 -march=native -pipe -fomit-frame-pointer -D_GLIBCXX_ASSERTIONS"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+MAKEOPTS="-j10 -l10"
+
+EMERGE_DEFAULT_OPTS="--jobs=10"
+PORTAGE_NICENESS="19"
+PORTAGE_IONICE_COMMAND="/usr/local/bin/io-priority \${PID}"
+PORTAGE_TMPDIR="/var/tmp"
+
+FEATURES="parallel-fetch parallel-install cgroup downgrade-backup collision-protect strict sandbox ipc-sandbox mount-sandbox network-sandbox pid-sandbox usersandbox"
+USE="
+hardened cet vtv lto acl audit apparmor seccomp caps filecaps verify-sig
+elogind acpi aac cxx dbus dga emacs openrc syslog udev threads wifi ffmpeg
+fontconfig gstreamer drm vaapi vdpau vulkan X -systemd
+-gnome-online-accounts -avahi -kde -console-kit -ldap -cdda -dvd -nls
+-ipv6 -networkmanager -sctp -geolocation -weather -qt4 -qt3support -ios
+-ipod -quicktime -smartcard
+"
+ACCEPT_LICENSE="*"
+VIDEO_CARDS="amdgpu redeonsi"

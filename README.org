@@ -1,0 +1,30 @@
+#+TITLE: My Gentoo Setup
+#+AUTHOR: Alec Stewart
+
+These are configuration files and some scripts for setting up Gentoo
+on my current machine.
+
+As of first writing this readme (<2022-06-28 Tue>) I myself am pretty green to Gentoo.
+
+My hope is that this repo will contain ebuilds and more scripts that I can share
+for setting up and working with Gentoo and its systems.
+
+* Why put them online?
+
+Because maybe someone new to Gentoo might find it useful to look through.
+
+Gentoo is a bit overwhelming at first. If someone can feel a bit of ease or gain clarity from
+looking at this repo, fantastic.
+
+* Clang?
+
+I have a directory for some configurations with using Clang instead of GCC.
+
+Again as of first writing the benefits of using the Clang+LLVM toolchain over GCC are a bit
+negligible. Some things run smoother with Clang, some run smoother with GCC.
+
+The other thing is that Gentoo’s [[https://wiki.gentoo.org/wiki/Hardened_Gentoo][Hardened Profile]] doesn’t do anything for Clang (provide flags to
+gcc or the link). So I’m inclined to think, that is.
+
+A lot of the configurations in that directory where taken from looking at the [[https://wiki.gentoo.org/wiki/Clang][Gentoo wiki Clang
+article]] and this [[https://dev.gentoo.org/~juippis/tmp/clangthinltodsystem.txt][linked configurations]] at the bottom of that wiki article.

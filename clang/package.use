@@ -1,0 +1,28 @@
+# Can't use lto with these, sadge
+dev-lang/python clang-no-lto.conf
+dev-libs/libffi clang-no-lto.conf
+dev-libs/libffi-compat clang-no-lto.conf
+sys-libs/db clang-no-lto.conf
+x11-base/xorg-server clang-no-lto.conf
+
+# Can't use clang with these (?), sadge
+dev-libs/elfutils with-gcc.conf
+dev-libs/libgcrypt with-gcc.conf
+dev-libs/libixion with-gcc.conf
+dev-libs/protobuf with-gcc.conf
+media-libs/libass with-gcc.conf
+media-libs/xvid with-gcc.conf
+media-sound/pulseaudio -daemon with-gcc.conf
+media-video/pipewire with-gcc.conf
+sys-devel/gcc with-gcc.conf # I don't really want to figure out compiling gcc *with* clang or vice versa
+sys-devel/m4 with-gcc.conf
+sys-libs/glibc with-gcc.conf
+sys-libs/libselinux with-gcc.conf
+
+# Can't use clang or lto with these (?), very sadge
+media-video/ffmpeg gcc-no-lto.conf
+
+#app-editors/emacs-29.0.9999 -athena -games -toolkit-scroll-bars clang-use-mold.conf
+
+# muh browser (minus Tor)
+www-client/firefox firefox.conf
