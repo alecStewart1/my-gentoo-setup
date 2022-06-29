@@ -12,6 +12,7 @@ RANLIB="llvm-ranlib"
 COMMON_FLAGS="-O2 -march=native -pipe -flto=thin -fstack-protector-all -fomit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_FORTIFY_SOURCE=2"
 CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
+MAKEOPTS="-j10 -l10"
 
 # Same thing with the COMMON_FLAGS above
 # For some packages I use the Mold linker: https://github.com/rui314/mold
@@ -19,17 +20,19 @@ LDFLAGS="-fuse-ld=lld -rtlib=compiler-rt -unwindlib=libunwind -Wl,-O2 -Wl,-pie -
 LLVM_ISA=1
 LLVM_TARGETS="AMDGPU BPF"
 
-MAKEOPTS="-j8 -l8"
-PORTAGE_NICENESS=1
+EMERGE_DEFAULT_OPTS="--jobs=10"
+PORTAGE_NICENESS="19"
+PORTAGE_IONICE_COMMAND="/usr/local/bin/io-priority \${PID}"
 PORTAGE_TMPDIR="/var/tmp"
 
 FEATURES="parallel-fetch parallel-install cgroup downgrade-backup collision-protect strict sandbox ipc-sandbox mount-sandbox network-sandbox pid-sandbox usersandbox"
 USE="
-clang hardened cet vtv lto acl audit apparmor seccomp caps filecaps verify-sig
-elogind acpi aac cxx dbus dga emacs openrc syslog udev threads wifi gstreamer
-vulkan X -systemd -gnome-gnome-online-accounts -avahi -kde -console-kit -ldap
--cdda -dvd -nls -ipv6 -networkmanager -sctp -geolocation -weather
--qt4 -qt3support -ios -ipod -quicktime -smartcard
+clang hardened cet vtv lto acl audit apparmor seccomp caps filecaps
+verify-sig elogind acpi aac cxx dbus dga emacs openrc syslog udev
+threads wifi ffmpeg fontconfig gstreamer drm vaapi vdpau vulkan
+X xinerama -systemd -gnome-online-accounts -avahi -kde -consolekit
+-ldap -cdda -dvd -nls -ipv6 -networkmanager -sctp -geolocation
+-weather -gtk-doc -qt4 -qt3support -ios -ipod -quicktime -smartcard
 "
 ACCEPT_LICENSE="*"
 VIDEO_CARDS="amdgpu radeonsi"

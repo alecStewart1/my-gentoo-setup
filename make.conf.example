@@ -15,9 +15,9 @@ FEATURES="parallel-fetch parallel-install cgroup downgrade-backup collision-prot
 USE="
 hardened cet vtv lto acl audit apparmor seccomp caps filecaps verify-sig
 elogind acpi aac cxx dbus dga emacs openrc syslog udev threads wifi ffmpeg
-fontconfig gstreamer drm vaapi vdpau vulkan X -systemd
--gnome-online-accounts -avahi -kde -console-kit -ldap -cdda -dvd -nls
--ipv6 -networkmanager -sctp -geolocation -weather -qt4 -qt3support -ios
+fontconfig gstreamer drm vaapi vdpau vulkan X xinerama -systemd
+-gnome-online-accounts -avahi -kde -consolekit -ldap -cdda -dvd -nls
+-ipv6 -networkmanager -sctp -geolocation -weather -gtk-doc -qt4 -qt3support -ios
 -ipod -quicktime -smartcard
 "
 ACCEPT_LICENSE="*"
