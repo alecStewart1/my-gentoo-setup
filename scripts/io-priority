@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PID-${1}
+PID=${1}
 
 ionice -c 3 -p ${PID}
 chrt -p -i 0 ${PID}

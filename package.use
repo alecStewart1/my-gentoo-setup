@@ -1,0 +1,5 @@
+media-sound/pulseaudio -daemon
+app-text/poppler -qt5
+
+# muh browser (minus Tor)
+#www-client/firefox firefox.conf
