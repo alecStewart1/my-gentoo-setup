@@ -1,5 +1,7 @@
+media-sound/pipewire sound-server
 media-sound/pulseaudio -daemon
+
+x11-misc/sddm -systemd
+
 app-text/poppler -qt5
 
-# muh browser (minus Tor)
-#www-client/firefox firefox.conf

@@ -15,9 +15,9 @@ PORTAGE_TMPDIR="/var/tmp"
 FEATURES="parallel-fetch parallel-install cgroup downgrade-backup collision-protect strict sandbox ipc-sandbox mount-sandbox network-sandbox pid-sandbox usersandbox"
 USE="
 hardened cet vtv lto acl audit apparmor seccomp caps filecaps verify-sig
-elogind acpi aac cxx dbus dga emacs openrc syslog udev threads wifi ffmpeg
+elogind acpi aac cxx dbus dga emacs openrc syslog threads wifi ffmpeg
 fontconfig gstreamer drm vaapi vdpau vulkan -systemd
--gnome-online-accounts -avahi -kde -console-kit -ldap -cdda -dvd -nls
+-gnome -gnome-online-accounts -avahi -kde -console-kit -ldap -cdda -dvd -nls
 -ipv6 -networkmanager -sctp -geolocation -weather -qt4 -qt3support -ios
 -ipod -quicktime -smartcard
 "
