@@ -1,5 +1,10 @@
-media-sound/pipewire sound-server
-media-sound/pulseaudio -daemon
+sys-devel/gcc lto
+sys-devel/m4 lto
+sys-libs/glibc lto
+dev-libs/elfutils lto
+
+media-sound/pipewire lto sound-server
+media-sound/pulseaudio lto -daemon
 
 x11-misc/sddm -systemd
 
